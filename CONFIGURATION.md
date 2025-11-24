@@ -7,7 +7,7 @@ This guide will help you configure the Retell callback widget demo with your cre
 You'll need the following from your Retell account:
 
 1. **Public Key**: `key_9b7349002a90326c7c553addd6ce` (already configured)
-2. **Agent ID**: `agent_d1e33aa42cae40033f4ce5e641` (already configured)
+2. **Agent ID**: `agent_ac11eadc8c18ff8b2cd30e6598` (already configured)
 3. **Phone Number**: The Retell phone number that will make outbound calls (needs to be configured)
 4. **Conversation Flow ID**: `conversation_flow_b65b55fd6a02` (optional, for advanced configuration)
 

@@ -56,7 +56,7 @@ Try the live demo: https://retell-logistics-demo-eight.vercel.app
 The demo is pre-configured with these credentials:
 
 - **Public Key**: `key_9b7349002a90326c7c553addd6ce`
-- **Agent ID**: `agent_d1e33aa42cae40033f4ce5e641`
+- **Agent ID**: `agent_ac11eadc8c18ff8b2cd30e6598`
 
 To use your own agent:
 

@@ -23,7 +23,7 @@ retell-callback-demo/
 The widget is configured with your credentials:
 
 - **Public Key**: `key_9b7349002a90326c7c553addd6ce`
-- **Agent ID**: `agent_d1e33aa42cae40033f4ce5e641`
+- **Agent ID**: `agent_ac11eadc8c18ff8b2cd30e6598`
 - **Conversation Flow**: `conversation_flow_b65b55fd6a02` (in advanced example)
 - **Phone Number**: `YOUR_RETELL_PHONE_NUMBER` ⚠️ **Needs to be configured**
 
@@ -71,7 +71,7 @@ All customization is done via data attributes in the `<script>` tag:
   src="https://dashboard.retellai.com/retell-widget.js"
   type="module"
   data-public-key="key_9b7349002a90326c7c553addd6ce"
-  data-agent-id="agent_d1e33aa42cae40033f4ce5e641"
+  data-agent-id="agent_ac11eadc8c18ff8b2cd30e6598"
   data-widget="callback"
   data-phone-number="YOUR_RETELL_PHONE_NUMBER"
   data-title="Request a Call"
