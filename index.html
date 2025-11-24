@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidetool Logistics - AI Lead Qualification & FAQ Support</title>
+    <title>Asistente Telefónico Pickit - Confirmación de Punto y Fecha</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.svg">
@@ -323,7 +323,7 @@
         <!-- Live Badge -->
         <div class="badge">
           <div class="pulse-dot"></div>
-          LIVE: Logistics AI Assistant
+          EN VIVO: Asistente Telefónico Pickit
         </div>
 
         <!-- Voice Waves -->
@@ -337,17 +337,17 @@
         <!-- Status Display -->
         <div id="status-area">
           <h2>
-            Sidetool Logistics
+            Asistente Telefónico
             <br />
-            <span class="subtitle">AI Lead Qualification & FAQ Support</span>
+            <span class="subtitle">Confirmación de Punto Pickit y Fecha</span>
           </h2>
 
           <p class="description">
-            Connect with our AI agent for instant logistics quotes, lead qualification, and answers to your shipping questions.
+            Conecta con nuestro asistente telefónico automatizado. Te guiará en una conversación simple y ordenada: confirmará tu identidad, te informará sobre tu punto Pickit asignado con dirección y horarios, y solicitará una fecha de compromiso.
           </p>
 
           <button id="connect-btn" class="btn-primary" onclick="startCall()">
-            Start Voice Call
+            Iniciar Llamada
           </button>
 
           <div id="error-area" class="error-box hidden"></div>
@@ -356,12 +356,12 @@
         <!-- Connected State -->
         <div id="connected-area" class="hidden">
           <h2>
-            Connected
+            Conectado
             <br />
-            <span class="subtitle">Logistics AI Agent</span>
+            <span class="subtitle">Asistente Telefónico Pickit</span>
           </h2>
 
-          <div class="success-text">✅ Voice call active</div>
+          <div class="success-text">✅ Llamada activa</div>
 
           <div class="timer">
             <span id="duration" class="timer-display">00:00</span>
@@ -369,36 +369,36 @@
 
           <div>
             <button class="btn-danger" onclick="endCall()">
-              End Call
+              Finalizar Llamada
             </button>
           </div>
 
           <p class="hint-text">
-            Speak naturally - the AI agent will respond in real-time
+            Habla naturalmente - el asistente te guiará paso a paso con un tono cálido y profesional
           </p>
         </div>
 
         <!-- Example Questions (Always Visible) -->
         <div class="example-questions">
-          <div class="example-questions-title">Try asking:</div>
+          <div class="example-questions-title">El asistente te ayudará con:</div>
           <div class="question-chips">
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="What services do you offer?">
-              What services do you offer?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Confirmar mi identidad">
+              Confirmar mi identidad
             </button>
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="How much do you charge per pallet?">
-              How much per pallet?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="¿Cuál es mi punto Pickit asignado?">
+              ¿Cuál es mi punto Pickit?
             </button>
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Where are your warehouses located?">
-              Where are your warehouses?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="¿Cuál es la dirección del punto?">
+              Dirección del punto
             </button>
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Can I visit the warehouse before booking?">
-              Can I tour the facility?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="¿Cuáles son los horarios?">
+              Horarios del punto
             </button>
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Do you offer pickup and delivery?">
-              Do you offer delivery?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Agendar fecha de compromiso">
+              Agendar fecha
             </button>
-            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="How quickly can I move in?">
-              How fast can I move in?
+            <button class="question-chip" onclick="handleExampleQuestion(this)" data-question="Tengo una pregunta">
+              Hacer una pregunta
             </button>
           </div>
         </div>
@@ -411,7 +411,7 @@
       // Configuration
       const CONFIG = {
         publicKey: 'key_303206f7fb34e74225c5b6e0fac4',
-        agentId: 'agent_6da1061ebd5d12e003656acf9a'
+        agentId: 'agent_ac11eadc8c18ff8b2cd30e6598'
       };
 
       let retellClient = null;
@@ -435,8 +435,8 @@
           });
 
           retellClient.on('error', (error) => {
-            console.error('❌ Call error:', error);
-            showError(error.message || 'An error occurred during the call');
+            console.error('❌ Error en la llamada:', error);
+            showError(error.message || 'Ocurrió un error durante la llamada');
             resetToInitialState();
           });
 
@@ -471,7 +471,7 @@
 
           const btn = document.getElementById('connect-btn');
           btn.disabled = true;
-          btn.textContent = 'Connecting...';
+          btn.textContent = 'Conectando...';
           hideError();
 
           console.log('🚀 Creating web call...');
@@ -503,7 +503,7 @@
 
         } catch (error) {
           console.error('❌ Error starting call:', error);
-          showError(error.message || 'Failed to start call. Please try again.');
+          showError(error.message || 'No se pudo iniciar la llamada. Por favor, intenta nuevamente.');
           resetToInitialState();
         }
       };
@@ -528,7 +528,7 @@
         document.getElementById('connected-area').classList.add('hidden');
         const btn = document.getElementById('connect-btn');
         btn.disabled = false;
-        btn.textContent = 'Start Voice Call';
+        btn.textContent = 'Iniciar Llamada';
         stopTimer();
       }
 
@@ -570,7 +570,7 @@
 
       // Initialize
       document.addEventListener('DOMContentLoaded', () => {
-        console.log('🎯 Retell Web Call Demo initialized');
+        console.log('🎯 Asistente Telefónico Pickit inicializado');
         initRetellClient();
       });
     </script>
